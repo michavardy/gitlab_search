@@ -2,7 +2,7 @@
 ---
 ## Overview
 
-The Gitlab-Search is an internal CLI and web application tool designed to search through projects and subgroups for keywords and regular expressions (regex) . This tool helps streamline the process of searching and analyzing codebases, enabling developers to efficiently locate specific patterns or function calls across projects and subgroups.
+Gitlab-Search is an internal CLI and web application tool designed to search through gitlab projects and subgroups for keywords and regular expressions (regex) . This tool helps streamline the process of searching and analyzing codebases, enabling developers to efficiently locate specific patterns or function calls across projects and subgroups.
 
 ## Features
 
@@ -16,17 +16,7 @@ The Gitlab-Search is an internal CLI and web application tool designed to search
 
 ### CLI Installation
 
-1. Clone the repository:
 
-   ```bash
-   git clone <repository_url>
-   ```
-
-2. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
 ---
 ## Usage
 
@@ -34,10 +24,12 @@ The Gitlab-Search is an internal CLI and web application tool designed to search
 
 ```bash
 
-python project_search.py --pattern <regex_pattern> --path <project_path>
+search  <search-prompt> [ARGUMENTS]
+    
+    #ARGUMENTS
+    --branch <branch-name>: Specify the branch (default: development)
+    --script_name_black_list <keyword>": Filter search results by providing a list of script names to remove from results (space delimited).
 
-    --pattern: The regular expression pattern to search for.
-    --path: The path to the project or subgroup to search within.
 ```
 
 ## Note
@@ -50,8 +42,9 @@ python project_search.py --pattern <regex_pattern> --path <project_path>
 Edit the .env file to specify default settings, such as token and group
 
 ```env
-GROUP=8708408
+GROUP= <gitlab-group-id>
 TOKEN=xxxxxxxxxx
+RESULTS_PER_PAGE=100
 ```
 ---
 ## Contributing
@@ -63,3 +56,12 @@ Contributions are welcome! If you encounter any issues or have ideas for enhance
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+## useful
+
+
+```bash
+. ~/AppData/local/pypoetry/Cache/virtualenvs/gitlab-search-JOGwssJF-py3.10/Scripts/activate
+```
