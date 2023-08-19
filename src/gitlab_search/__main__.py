@@ -1,6 +1,6 @@
 import click
 import re
-from gitlabClient import GitlabClient
+from .gitlabClient import GitlabClient
 import colorama
 from pprint import pprint
 

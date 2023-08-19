@@ -28,4 +28,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-search = "cli:search"
+search = "src.gitlab_search:search"
